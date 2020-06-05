@@ -3856,7 +3856,7 @@ function bot_ui_ini() {
     }).then(function () {
         botui.message.add({
             delay: 1100,
-            content: "我是Dx"
+            content: "我是 Dx"
         }).then(function () {
             botui.message.add({
                 delay: 1100,
@@ -3907,7 +3907,7 @@ function bot_ui_ini() {
                     }).then(function () {
                         botui.message.add({
                             delay: 1500,
-                            content: "主修 C和 C++ 、Java,辅修 SQL Go Python，熟练使用 Ps、Pr、Ae, 并做过hackintosh, 略知 linux,偶尔也搞 HTML/CSS/JavaScript/Spring"
+                            content: "主修 C和 C++ 、Java, 辅修 SQL Go Python，熟练使用 Ps、Pr、Ae, 搞过 hackintosh, 略知 linux, 偶尔也搞 HTML / CSS / JavaScript / Spring"
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
@@ -3956,7 +3956,7 @@ function bot_ui_ini() {
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
-                    content: "希望自己很厉害吧, 定个小目标，宝马5系, 哈哈哈"
+                    content: "希望自己很厉害吧, 定个小目标，宝马5系吧, 哈哈哈"
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
