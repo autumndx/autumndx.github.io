@@ -3956,7 +3956,7 @@ function bot_ui_ini() {
             }).then(function () {
                 botui.message.add({
                     delay: 1100,
-                    content: "希望自己很厉害吧, 定个小目标，宝马5系吧, 哈哈哈"
+                    content: "学技术练硬功，争当首席岗位工😎."
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
@@ -3973,7 +3973,7 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1e3,
-                content: "emmmm,我的账号名都是DxSummer哦"
+                content: "emm,我的账号名都是DxSummer哦"
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
