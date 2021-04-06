@@ -12,22 +12,22 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<meta name="description" content="第二章 关系数据库1. 关系1.1 域域是一组具有相同数据类型的值的集合。 例: 整数 实数 介于某个取值范围的整数 指定长度的字符串集合 {‘男’ ， ‘女’ } 1.2 笛卡尔积给定一组域D1， D2， …， Dn， 允许其中某些域是相同的。D1， D2， …， Dn的笛卡尔积为：D1× D2× …× Dn ＝｛（d1， d2， …， dn） ｜ di∈Di， i＝1， 2， …， n｝ 所有">
+<meta name="description" content="第二章 关系数据库1. 关系数据结构及形式化定义1.1 关系1.1.1 域域是一组具有相同数据类型的值的集合。 例: 整数 实数 介于某个取值范围的整数 指定长度的字符串集合 {‘男’ ， ‘女’ } 1.1.2 笛卡尔积给定一组域D1， D2， …， Dn， 允许其中某些域是相同的。D1， D2， …， Dn的笛卡尔积为：D1× D2× …× Dn ＝｛（d1， d2， …， dn） ｜ di∈">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SQL Sever笔记">
 <meta property="og:url" content="https://dxsummer.gitee.io/posts/ab4279d1/index.html">
 <meta property="og:site_name" content="Dx">
-<meta property="og:description" content="第二章 关系数据库1. 关系1.1 域域是一组具有相同数据类型的值的集合。 例: 整数 实数 介于某个取值范围的整数 指定长度的字符串集合 {‘男’ ， ‘女’ } 1.2 笛卡尔积给定一组域D1， D2， …， Dn， 允许其中某些域是相同的。D1， D2， …， Dn的笛卡尔积为：D1× D2× …× Dn ＝｛（d1， d2， …， dn） ｜ di∈Di， i＝1， 2， …， n｝ 所有">
+<meta property="og:description" content="第二章 关系数据库1. 关系数据结构及形式化定义1.1 关系1.1.1 域域是一组具有相同数据类型的值的集合。 例: 整数 实数 介于某个取值范围的整数 指定长度的字符串集合 {‘男’ ， ‘女’ } 1.1.2 笛卡尔积给定一组域D1， D2， …， Dn， 允许其中某些域是相同的。D1， D2， …， Dn的笛卡尔积为：D1× D2× …× Dn ＝｛（d1， d2， …， dn） ｜ di∈">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 <meta property="article:published_time" content="2021-04-05T11:02:51.000Z">
-<meta property="article:modified_time" content="2021-04-05T13:02:07.298Z">
+<meta property="article:modified_time" content="2021-04-06T11:28:53.496Z">
 <meta property="article:author" content="DxSummer">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"SQL","url":"https://dxsummer.gitee.io/posts/ab4279d1/","headline":"SQL Sever笔记","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2021-04-05T11:02:51.000Z","dateModified":"2021-04-05T13:02:07.298Z","keywords":"SQL","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/ab4279d1/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"SQL","url":"https://dxsummer.gitee.io/posts/ab4279d1/","headline":"SQL Sever笔记","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2021-04-05T11:02:51.000Z","dateModified":"2021-04-06T11:28:53.496Z","keywords":"SQL","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/ab4279d1/"}}]</script>
 
 
 <link href="/css/font.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="/theme.62bf765115dd244ced7c.css" is="theme">
 
 
-<script src="/config.94c4b6af039c1703908c.js"></script>
+<script src="/config.f655a3354f7acc654ed9.js"></script>
 
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-165416967-1"></script>
