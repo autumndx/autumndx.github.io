@@ -12,22 +12,22 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<meta name="description" content="字符函数转整数（转字符）ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符： 12345678&gt;&gt;&gt; ord(&#39;A&#39;)65&gt;&gt;&gt; ord(&#39;中&#39;)20013&gt;&gt;&gt; chr(66)&#39;B&#39;&gt;&gt;&gt; chr(25991)&#39;文&#39;如果知道字符的整数编码，还可以用十六进制这么写str： 12&gt;&gt;&gt; &#39;\">
+<meta name="description" content="字符函数新旧字符替换replace()12345&gt;&gt;&gt; a &#x3D; &#39;abc&#39;&gt;&gt;&gt; a.replace(&#39;a&#39;, &#39;A&#39;)	&#x2F;&#x2F;把字符串中的 old（旧字符串） 替换成new(新字符串)&#39;Abc&#39;&gt;&gt;&gt; a&#39;abc&#39;虽然字符串有个replace()方法，也确实变出了&#39;Abc&#39;，但变量a最后仍是&#39;abc&#39;，应该怎么理">
 <meta property="og:type" content="website">
 <meta property="og:title" content="python主要函数">
 <meta property="og:url" content="https://dxsummer.gitee.io/posts/d8c26074/index.html">
 <meta property="og:site_name" content="Dx">
-<meta property="og:description" content="字符函数转整数（转字符）ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符： 12345678&gt;&gt;&gt; ord(&#39;A&#39;)65&gt;&gt;&gt; ord(&#39;中&#39;)20013&gt;&gt;&gt; chr(66)&#39;B&#39;&gt;&gt;&gt; chr(25991)&#39;文&#39;如果知道字符的整数编码，还可以用十六进制这么写str： 12&gt;&gt;&gt; &#39;\">
+<meta property="og:description" content="字符函数新旧字符替换replace()12345&gt;&gt;&gt; a &#x3D; &#39;abc&#39;&gt;&gt;&gt; a.replace(&#39;a&#39;, &#39;A&#39;)	&#x2F;&#x2F;把字符串中的 old（旧字符串） 替换成new(新字符串)&#39;Abc&#39;&gt;&gt;&gt; a&#39;abc&#39;虽然字符串有个replace()方法，也确实变出了&#39;Abc&#39;，但变量a最后仍是&#39;abc&#39;，应该怎么理">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 <meta property="article:published_time" content="2021-03-31T12:35:52.000Z">
-<meta property="article:modified_time" content="2021-04-11T11:42:58.364Z">
+<meta property="article:modified_time" content="2021-04-14T08:54:45.199Z">
 <meta property="article:author" content="DxSummer">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Python","url":"https://dxsummer.gitee.io/posts/d8c26074/","headline":"python主要函数","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2021-03-31T12:35:52.000Z","dateModified":"2021-04-11T11:42:58.364Z","keywords":"Python","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/d8c26074/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Python","url":"https://dxsummer.gitee.io/posts/d8c26074/","headline":"python主要函数","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2021-03-31T12:35:52.000Z","dateModified":"2021-04-14T08:54:45.199Z","keywords":"Python","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/d8c26074/"}}]</script>
 
 
 <link href="/css/font.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="/theme.62bf765115dd244ced7c.css" is="theme">
 
 
-<script src="/config.7a86cb619d3ff1ca8fad.js"></script>
+<script src="/config.07483c64bbbdbc0bedd7.js"></script>
 
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-165416967-1"></script>
