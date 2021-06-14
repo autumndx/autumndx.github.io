@@ -12,22 +12,22 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<meta name="description" content="入门Java程序基础Java程序基本结构我们先剖析一个完整的Java程序，它的基本结构是什么： 123456789101112&#x2F;** * 可以用来自动创建文档的注释 *&#x2F;public class Hello &amp;#123;    public static void main(String[] args) &amp;#123;        &#x2F;&#x2F; 向屏幕输出文本:        System.out.pri">
+<meta name="description" content="黑马程序员JDK&#x2F;JREJRE 是Java程序的运行时环境，包含JVM和运行时所需要的核心类库。 JVM java虚拟机 跨平台win mac Linux JDK 是Java程序开发工具包，包含JRE和开发人员使用的工具。 其中的开发工具:编译工具(javac.exe)和运行工具(java.exe)。 我们想要开发一个全新的Java程序，那么必须安装JDK。 JDK安装目录  目录名称说明  bi">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Java笔记">
 <meta property="og:url" content="https://dxsummer.gitee.io/posts/b6543913/index.html">
 <meta property="og:site_name" content="Dx">
-<meta property="og:description" content="入门Java程序基础Java程序基本结构我们先剖析一个完整的Java程序，它的基本结构是什么： 123456789101112&#x2F;** * 可以用来自动创建文档的注释 *&#x2F;public class Hello &amp;#123;    public static void main(String[] args) &amp;#123;        &#x2F;&#x2F; 向屏幕输出文本:        System.out.pri">
+<meta property="og:description" content="黑马程序员JDK&#x2F;JREJRE 是Java程序的运行时环境，包含JVM和运行时所需要的核心类库。 JVM java虚拟机 跨平台win mac Linux JDK 是Java程序开发工具包，包含JRE和开发人员使用的工具。 其中的开发工具:编译工具(javac.exe)和运行工具(java.exe)。 我们想要开发一个全新的Java程序，那么必须安装JDK。 JDK安装目录  目录名称说明  bi">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 <meta property="article:published_time" content="2021-04-12T00:15:27.000Z">
-<meta property="article:modified_time" content="2021-04-12T11:11:01.416Z">
+<meta property="article:modified_time" content="2021-06-14T09:26:04.476Z">
 <meta property="article:author" content="DxSummer">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java","url":"https://dxsummer.gitee.io/posts/b6543913/","headline":"Java笔记","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2021-04-12T00:15:27.000Z","dateModified":"2021-04-12T11:11:01.416Z","keywords":"Java","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/b6543913/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java","url":"https://dxsummer.gitee.io/posts/b6543913/","headline":"Java笔记","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2021-04-12T00:15:27.000Z","dateModified":"2021-06-14T09:26:04.476Z","keywords":"Java","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/b6543913/"}}]</script>
 
 
 <link href="/css/font.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="/theme.62bf765115dd244ced7c.css" is="theme">
 
 
-<script src="/config.d18e274736ce562a014f.js"></script>
+<script src="/config.0906b45d92fc7f6c6722.js"></script>
 
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-165416967-1"></script>
