@@ -2,7 +2,7 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<title>Macbook优化 - Dx</title>
+<title>用pmset管理macOS的睡眠 - Dx</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="https://dxsummer.gitee.io/posts/3c3fd7cd/">
@@ -12,22 +12,22 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<meta name="description" content="关闭聚焦问题背景有时候忽然发现风扇转到特别厉害，打开的应用程序并不多。打开活动监视器，可以看到 mds、mds_stores、mdworker 占用很高的 cpu 和 内存 资源。  Spotlight 中文名称为 聚焦，就是按下 Command + 空格 弹窗的那个搜索框。 问题处理以上是 聚焦 的功能说明，因为我很少使用这些功能，所以我选择了禁止 聚焦 索引文件。 1sudo mdutil -">
+<meta name="description" content="用 pmset 管理 macOS 的睡眠 Power Manager Setting (pmset) 是 macOS 的系统级电池管理工具，通过调整 macOS 的睡眠计划，可以让Mac睡得更「好」，达到 「插电响应快，断电用得久」 的理想目标。  Mac 是怎么睡觉的？Mac 的睡觉分成两种，「睡眠」 (sleep) 和 「休眠」 (hibernate)。简单点说，睡眠和休眠就好比人的小憩和睡大">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Macbook优化">
+<meta property="og:title" content="用pmset管理macOS的睡眠">
 <meta property="og:url" content="https://dxsummer.gitee.io/posts/3c3fd7cd/index.html">
 <meta property="og:site_name" content="Dx">
-<meta property="og:description" content="关闭聚焦问题背景有时候忽然发现风扇转到特别厉害，打开的应用程序并不多。打开活动监视器，可以看到 mds、mds_stores、mdworker 占用很高的 cpu 和 内存 资源。  Spotlight 中文名称为 聚焦，就是按下 Command + 空格 弹窗的那个搜索框。 问题处理以上是 聚焦 的功能说明，因为我很少使用这些功能，所以我选择了禁止 聚焦 索引文件。 1sudo mdutil -">
+<meta property="og:description" content="用 pmset 管理 macOS 的睡眠 Power Manager Setting (pmset) 是 macOS 的系统级电池管理工具，通过调整 macOS 的睡眠计划，可以让Mac睡得更「好」，达到 「插电响应快，断电用得久」 的理想目标。  Mac 是怎么睡觉的？Mac 的睡觉分成两种，「睡眠」 (sleep) 和 「休眠」 (hibernate)。简单点说，睡眠和休眠就好比人的小憩和睡大">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 <meta property="article:published_time" content="2022-01-19T12:44:01.000Z">
-<meta property="article:modified_time" content="2022-01-21T16:20:23.341Z">
+<meta property="article:modified_time" content="2022-01-20T06:18:35.706Z">
 <meta property="article:author" content="DxSummer">
 <meta property="article:tag" content="Mac">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://dxsummer.gitee.io/images/avatar.jpg">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"https://dxsummer.gitee.io/posts/3c3fd7cd/","headline":"Macbook优化","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2022-01-19T12:44:01.000Z","dateModified":"2022-01-21T16:20:23.341Z","keywords":"Mac","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/3c3fd7cd/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"url":"https://dxsummer.gitee.io","image":"https://dxsummer.gitee.io/images/avatar.jpg","description":"Dx's Blog","author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"https://dxsummer.gitee.io/posts/3c3fd7cd/","headline":"用pmset管理macOS的睡眠","image":"https://dxsummer.gitee.io/images/avatar.jpg","datePublished":"2022-01-19T12:44:01.000Z","dateModified":"2022-01-20T06:18:35.706Z","keywords":"Mac","description":"Dx's Blog","publisher":{"@type":"Organization","name":"Dx","logo":{"@type":"ImageObject","url":"https://dxsummer.gitee.io/images/avatar.jpg"}},"author":{"@type":"Person","name":"DxSummer","description":"学技术练硬功，争当首席岗位工😎.","image":"https://dxsummer.gitee.io/images/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dxsummer.gitee.io/posts/3c3fd7cd/"}}]</script>
 
 
 <link href="/css/font.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="/theme.62bf765115dd244ced7c.css" is="theme">
 
 
-<script src="/config.22e766f44c1f6295cc66.js"></script>
+<script src="/config.92495c4c51b9fd6f1e24.js"></script>
 
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-165416967-1"></script>
